@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-navy: #101D32;
+    --deep-navy: #0B1424;
+    --antique-gold: #C6A15B;
+    --light-gold: #D9BC82;
+    --ivory: #F8F6F1;
+    --white: #FFFFFF;
+    --charcoal: #252A33;
+    --muted-grey: #737B87;
+    --light-border: #E4DFD4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: var(--charcoal);
+    background-color: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background-color: #C6A15B;
+    color: #0B1424;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1424;
+}
+::-webkit-scrollbar-thumb {
+  background: #25395A;
+  border-radius: 5px;
+  border: 2px solid #0B1424;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A15B;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid #C6A15B;
+  outline-offset: 3px;
+}
+
+/* Legal luxury textures & ornaments */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D9BC82 0%, #C6A15B 50%, #9B793A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D9BC82 0%, #C6A15B 100%);
+}
+
+.navy-gradient-bg {
+  background: linear-gradient(180deg, #101D32 0%, #0B1424 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(198, 161, 91, 0.2);
+}
+
+.legal-grid-pattern {
+  background-image: radial-gradient(rgba(198, 161, 91, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
